@@ -1,0 +1,23 @@
+AGRISAFE - ou deposer les fichiers (tout au meme endroit que index.html, sans dossier)
+
+IMAGES (jpg ou png) :
+  hero-bg.jpg               fond du haut de page (champs / tracteur)
+  logo.png                  logo rond (en haut a gauche + pied de page)
+  exposition-cutanee.jpg    carrousel, diapo 1
+  exposition-respiratoire.jpg  carrousel, diapo 2
+  exposition-digestive.jpg  carrousel, diapo 3
+  exposition-environnement.jpg carrousel, diapo 4
+  mecanisme-hormonal.png    schema de la partie "Comment agissent-ils ?"
+  agriculteur.png           photo de l'agriculteur (detouree = mieux)
+  schema-conseils.png       schema des bonnes pratiques
+  camarade1.jpg, camarade2.jpg, camarade3.jpg   photos de l'equipe (fin de page)
+
+VIDEOS (mp4) :
+  temoignage.mp4, intro-science.mp4, explication.mp4
+  (Attention : l'envoi par le site GitHub est limite a 25 Mo par fichier.)
+
+Dans index.html, chaque endroit a remplir est repere par un commentaire :
+  <!-- ⬇⬇ IMAGE A AJOUTER : ... ⬇⬇ -->
+Si ton fichier a un autre nom, change simplement le nom dans src="..." juste en dessous.
+
+A REMPLACER AUSSI : les textes entre [crochets] (temoignage, equipe, [vos noms], sources).

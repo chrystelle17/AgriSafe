@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriSafe – Perturbateurs endocriniens et agriculture réunionnaise</title>
+  <meta name="description" content="AgriSafe : comment les perturbateurs endocriniens perturbent l'agriculture réunionnaise ?">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HERO ================= -->
+  <div class="hero-wrap" id="accueil">
+    <header class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="logo" title="AgriSafe">
+        <!-- Mets ton logo dans logo.png (rond noir en attendant) -->
+        <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "logo.png" sur GitHub, à côté de index.html ⬇⬇ -->
+        <img src="Logo.jpeg" alt="Logo AgriSafe">
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-tag">AgriSafe</p>
+        <h1>Comment les perturbateurs endocriniens perturbent l'agriculture réunionnaise&nbsp;?</h1>
+      </div>
+    </header>
+  </div>
+
+  <a href="#temoignage" class="scroll-down" aria-label="Descendre vers le témoignage">
+    <svg viewBox="0 0 48 28" aria-hidden="true"><polyline points="4,4 24,24 44,4"/></svg>
+  </a>
+
+  <main>
+
+    <!-- ================= TÉMOIGNAGE ================= -->
+    <section class="section" id="temoignage">
+      <div class="container">
+        <div class="frame">
+          <h2 class="frame-title">Témoignage</h2>
+          <p class="frame-text">
+            [Texte de présentation] Rencontre avec un agriculteur réunionnais : il nous raconte son quotidien,
+            la manière dont il utilise les produits phytosanitaires et ce qu'il ressent face aux risques pour sa santé.
+          </p>
+          <div class="video-box">
+            <video controls preload="metadata">
+              <!-- ⬇⬇ VIDÉO À AJOUTER : dépose le fichier "temoignage.mp4" sur GitHub, à côté de index.html ⬇⬇ -->
+              <source src="temoignage.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PARTIE SCIENTIFIQUE ================= -->
+    <section class="section section-tint" id="science">
+      <div class="container">
+        <h2 class="section-title">Partie scientifique</h2>
+        <p class="section-intro">
+          Un <strong>perturbateur endocrinien</strong> est une substance étrangère à l'organisme qui altère le
+          fonctionnement du système hormonal et peut entraîner des effets néfastes sur la santé.
+          Pour poser les bases, regardez cette courte vidéo.
+        </p>
+        <div class="video-box video-wide">
+          <video controls preload="metadata">
+            <!-- ⬇⬇ VIDÉO À AJOUTER : dépose le fichier "intro-science.mp4" sur GitHub, à côté de index.html ⬇⬇ -->
+            <source src="intro-science.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <p class="video-caption">Vidéo posant les bases</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Comprendre l'exposition -->
+    <section class="section" id="exposition">
+      <div class="container">
+        <h2 class="section-title"><span class="num">1</span> Comprendre l'exposition</h2>
+        <p class="section-intro">
+          Pour bien comprendre ce qui se joue sur notre île, il faut regarder les chiffres de terrain et les rapports officiels. À La Réunion, le climat tropical humide engendre une forte pression parasitaire sur les cultures, ce qui a longtemps nécessité un recours important aux produits phytosanitaires, notamment dans la canne à sucre.
+        </p>
+        <p>
+          Si l'on regarde les données de Santé Publique France et le projet Matphyto (relayé par la DAAF), on observe que <strong>près de 88 % des travailleurs de la canne à sucre</strong> sur l'île ont été exposés à au moins un pesticide toxique, ce qui représente environ 6 300 personnes (4 600 hommes et 1 700 femmes). 
+        </p>
+        <p>
+          Parmi les substances les plus massivement utilisées et suivies sur nos terres, on retrouve des herbicides majeurs comme le <strong>glyphosate</strong> (environ 5 000 personnes exposées) et le <strong>2,4-D</strong> (environ 6 300 personnes exposées), mais aussi la mésotrione et le S-métolachlore, maintenant ainsi une imprégnation continue au cœur de nos exploitations.
+        </p>
+
+        <div class="carousel-area">
+          <button class="carousel-btn prev" id="prevBtn" aria-label="Diapositive précédente">&#10094;</button>
+
+          <div class="carousel" id="carousel">
+            <div class="slide active">
+              <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "exposition-cutanee.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
+              <img src="exposition-cutanee.jpg" alt="Exposition par la peau">
+              <div class="slide-caption">
+                <h3>Par la peau</h3>
+                <p>Préparation de la bouillie, épandage, nettoyage du matériel : les produits traversent la peau, surtout sans gants ni combinaison.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "exposition-respiratoire.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
+              <img src="exposition-respiratoire.jpg" alt="Exposition par inhalation">
+              <div class="slide-caption">
+                <h3>Par inhalation</h3>
+                <p>Gouttelettes et vapeurs pulvérisées sont respirées, surtout par vent ou dans les serres et hangars fermés.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "exposition-digestive.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
+              <img src="exposition-digestive.jpg" alt="Exposition par ingestion">
+              <div class="slide-caption">
+                <h3>Par ingestion</h3>
+                <p>Manger, boire ou fumer avec des mains souillées, ou consommer des aliments contaminés.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "exposition-environnement.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
+              <img src="exposition-environnement.jpg" alt="Contamination de l'environnement">
+              <div class="slide-caption">
+                <h3>Par l'environnement</h3>
+                <p>Eau, sol et air peuvent être pollués : familles et riverains sont aussi concernés.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn next" id="nextBtn" aria-label="Diapositive suivante">&#10095;</button>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </section>
+
+    <!-- 2. Comment agissent-ils ? -->
+    <section class="section section-tint" id="action">
+      <div class="container">
+        <h2 class="section-title"><span class="num">2</span> Comment agissent-ils&nbsp;?</h2>
+        <p class="section-intro">
+          Mais concrètement, que se passe-t-il dans l'organisme à l'échelle moléculaire lorsqu'on manipule ou que l'on côtoie ces substances ? Les pesticides et polluants du quotidien agissent comme de puissants perturbateurs endocriniens.
+        </p>
+
+        <div class="text-image">
+          <div class="text-block">
+            <p>Le système endocrinien produit des <strong>hormones</strong>, des messagers chimiques qui régulent la croissance, le métabolisme, la reproduction ou l'humeur. Chaque hormone se fixe sur un <strong>récepteur</strong> précis, comme une clé dans une serrure.</p>
+            <p>Appartenant à des familles chimiques (organophosphorés, pyréthrinoïdes...), ces molécules xénobiotiques possèdent des structures proches de nos hormones et interfèrent de trois façons majeures :</p>
+            <ul class="check-list">
+              <li><strong>Mimer</strong> une hormone naturelle et activer le récepteur à tort (effet agoniste).</li>
+              <li><strong>Bloquer</strong> le récepteur et empêcher l'hormone d'agir (effet antagoniste).</li>
+              <li><strong>Dérégler</strong> la production, le transport ou l'élimination enzymatique des hormones.</li>
+            </ul>
+            <p>En s'infiltrant ainsi dans l'organisme, parfois à <strong>très faibles doses</strong>, elles dérèglent durablement le métabolisme, la thyroïde, le cerveau et les organes reproducteurs.</p>
+          </div>
+          <figure class="image-block">
+            <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "mecanisme-hormonal.png" sur GitHub, à côté de index.html ⬇⬇ -->
+            <img src="mecanisme-hormonal.png" alt="Schéma du mécanisme d'action d'un perturbateur endocrinien">
+            <figcaption>Schéma : le perturbateur se fixe sur le récepteur à la place de l'hormone.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Effets sur l'organisme -->
+    <section class="section" id="effets">
+      <div class="container">
+        <h2 class="section-title"><span class="num">3</span> Les effets sur l'organisme</h2>
+        <p class="section-intro">
+          Dès lors, quelles sont les conséquences à long terme pour la santé des travailleurs de la terre et de la population réunionnaise&nbsp;?
+        </p>
+        <p>
+          Cette exposition professionnelle chronique perturbe durablement l'équilibre hormonal et provoque des dégâts profonds au niveau cellulaire. Les suivis épidémiologiques menés auprès des agriculteurs exposés au glyphosate et au 2,4-D mettent en évidence un <strong>stress oxydatif majeur</strong> qui endommage l'ADN et affaiblit le système immunitaire.
+        </p>
+        <p>
+          C'est ce mécanisme cellulaire qui explique l'augmentation des risques de troubles de la fertilité, de déséquilibres métaboliques (comme l'obésité liée à la thyroïde) et l'apparition de cancers professionnels, tels que les lymphomes, ou encore la reconnaissance de la maladie de Parkinson.
+        </p>
+        <p>
+          À La Réunion, face à cette réalité scientifique, la protection de notre santé passe impérativement par une prise de conscience globale, que ce soit par la réduction de l'usage des pesticides ou par l'attention portée à notre environnement quotidien.
+        </p>
+
+        <p class="section-intro" style="margin-top: 2rem;">Survolez ou touchez chaque effet pour en savoir plus.</p>
+
+        <div class="effects-stage">
+          <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "agriculteur.png" sur GitHub, à côté de index.html ⬇⬇ -->
+          <img src="agriculteur.png" alt="Agriculteur" class="effects-img">
+
+          <!-- --w = distance entre le bord et le point (à ajuster selon ta photo) -->
+          <div class="effect left"  style="top:8%;  --w:36%;" tabindex="0">
+            <span class="effect-label">Troubles neurologiques</span><span class="effect-line"></span><span class="effect-dot"></span>
+            <span class="effect-detail">Fatigue, troubles de la mémoire, maladies neurodégénératives.</span>
+          </div>
+          <div class="effect left"  style="top:34%; --w:33%;" tabindex="0">
+            <span class="effect-label">Troubles respiratoires</span><span class="effect-line"></span><span class="effect-dot"></span>
+            <span class="effect-detail">Irritations, asthme, gêne respiratoire liée à l'inhalation des produits.</span>
+          </div>
+          <div class="effect left"  style="top:62%; --w:34%;" tabindex="0">
+            <span class="effect-label">Cancers hormonodépendants</span><span class="effect-line"></span><span class="effect-dot"></span>
+            <span class="effect-detail">Risque accru de cancers de la prostate, des testicules ou du sein.</span>
+          </div>
+
+          <div class="effect right" style="top:14%; --w:36%;" tabindex="0">
+            <span class="effect-label">Troubles de la thyroïde</span><span class="effect-line"></span><span class="effect-dot"></span>
+            <span class="effect-detail">Dérèglement du métabolisme, fatigue, variations de poids.</span>
+          </div>
+          <div class="effect right" style="top:42%; --w:34%;" tabindex="0">
+            <span class="effect-label">Troubles de la fertilité</span><span class="effect-line"></span><span class="effect-dot"></span>
+            <span class="effect-detail">Baisse de la qualité du sperme, difficultés à concevoir, malformations.</span>
+          </div>
+          <div class="effect right" style="top:70%; --w:35%;" tabindex="0">
+            <span class="effect-label">Troubles cutanés</span><span class="effect-line"></span><span class="effect-dot"></span>
+            <span class="effect-detail">Dermatites, allergies et irritations au contact des produits.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIDÉO EXPLICATIVE ================= -->
+    <section class="section section-tint" id="video-explicative">
+      <div class="container">
+        <h2 class="section-title">Vidéo explicative scientifique</h2>
+        <div class="video-box video-wide">
+          <video controls preload="metadata">
+            <!-- ⬇⬇ VIDÉO À AJOUTER : dépose le fichier "explication.mp4" sur GitHub, à côté de index.html ⬇⬇ -->
+            <source src="explication.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONSEILS ================= -->
+<section class="section" id="conseils">
+  <div class="container">
+    <div class="frame frame-big">
+      <h2 class="frame-title center">Conseils pour réduire l'exposition</h2>
+
+      <figure class="image-block advice-schema">
+        <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "schéma.jpeg" sur GitHub, à côté de index.html ⬇⬇ -->
+        <img src="schema2.jpeg" alt="Schéma des bonnes pratiques">
+        <figcaption>Schéma des bonnes pratiques</figcaption>
+      </figure>
+      
+      <div class="advice-grid">
+        <article class="advice-card">
+          <span class="icon">🧤</span>
+          <div>
+            <h3>Se protéger (EPI)</h3>
+            <p>Porter systématiquement gants résistants, combinaison à manches longues, masque, lunettes de protection et bottes imperméables lors de la préparation et de l'épandage pour éviter l'absorption par la peau, les yeux ou les voies respiratoires.</p>
+          </div>
+        </article>
+
+        <article class="advice-card">
+          <span class="icon">🌬️</span>
+          <div>
+            <h3>Respecter les conditions & délais</h3>
+            <p>Ne pas traiter par vent fort. Respecter les doses recommandées et les <strong>délais de rentrée</strong> dans les parcelles traitées pour éviter tout contact direct avec les résidus.</p>
+          </div>
+        </article>
+
+        <article class="advice-card">
+          <span class="icon">🧼</span>
+          <div>
+            <h3>Se laver et changer</h3>
+            <p>Se laver soigneusement les mains, prendre une douche après le travail, laver les vêtements de protection séparément et changer de tenue avant de regagner son domicile pour protéger ses proches.</p>
+          </div>
+        </article>
+
+        <article class="advice-card">
+          <span class="icon">🌱</span>
+          <div>
+            <h3>Favoriser les alternatives</h3>
+            <p>Réduire l'usage des pesticides grâce à des variétés résistantes, la lutte intégrée, les insectes auxiliaires, le désherbage mécanique, la rotation des cultures et l'agroécologie.</p>
+          </div>
+        </article>
+
+        <article class="advice-card advice-last">
+          <span class="icon">📦</span>
+          <div>
+            <h3>Stocker et éliminer</h3>
+            <p>Conserver les pesticides dans leurs emballages d'origine, dans un local fermé à clé et bien aéré, afin d'éviter les fuites, les incendies, la pollution et l'exposition des populations sensibles (femmes enceintes, jeunes).</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ================= ÉQUIPE ================= -->
+    <section class="section section-tint" id="equipe">
+      <div class="container">
+        <h2 class="section-title">L'équipe</h2>
+        <p class="section-intro">Les personnes qui ont réalisé AgriSafe.</p>
+
+        <div class="equipe-liste">
+
+          <!-- ===== MEMBRE 1 : copie ce bloc <article> pour ajouter quelqu'un ===== -->
+          <article class="membre">
+            <figure class="membre-photo">
+              <!-- ⬇⬇ PHOTO À AJOUTER : dépose "camarade1.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
+              <img src="bap.jpeg" alt="Photo de FONTAINE Baptiste">
+            </figure>
+            <div class="membre-texte">
+              <h3>FONTAINE Thierry, l'agriculteur</h3>
+              <p class="membre-role">Partie : Témoignage</p>
+              <p>[Écris ici quelques phrases : ce que tu as fait, ce que tu as appris, un message que tu voudrais faire passer.]</p>
+            </div>
+          </article>
+
+          <!-- ===== MEMBRE 2 ===== -->
+          <article class="membre">
+            <figure class="membre-photo">
+              <!-- ⬇⬇ PHOTO À AJOUTER : dépose "camarade2.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
+              <img src="anj.jpeg" alt="Photo de ANGAMOUTOU Anjali">
+            </figure>
+            <div class="membre-texte">
+              <h3>ANGAMOUTOU Anjali , la scientifique</h3>
+              <p class="membre-role">Partie : Partie scientifique</p>
+              <p>[Écris ici quelques phrases : ce que tu as fait, ce que tu as appris, un message que tu voudrais faire passer.]</p>
+            </div>
+          </article>
+
+          <!-- ===== MEMBRE 3 ===== -->
+          <article class="membre">
+            <figure class="membre-photo">
+              <!-- ⬇⬇ PHOTO À AJOUTER : dépose "camarade3.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
+              <img src="col.jpeg" alt="Photo de DALLEAU Colleen">
+            </figure>
+            <div class="membre-texte">
+              <h3>DALLEAU Colleen, la psychologue spécialiste des perturbateurs endocriniens et de la santé agricole</h3>
+              <p class="membre-role">Partie : Conseils</p>
+              <p>[Écris ici quelques phrases : ce que tu as fait, ce que tu as appris, un message que tu voudrais faire passer.]</p>
+            </div>
+          </article>
+          
+            <!-- ===== MEMBRE 3 ===== -->
+          <article class="membre">
+            <figure class="membre-photo">
+              <!-- ⬇⬇ PHOTO À AJOUTER : dépose "camarade3.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
+              <img src="oce.jpeg" alt="Photo de CHRISTINA Océane">
+            </figure>
+            <div class="membre-texte">
+              <h4>CHRISTINA Océane, la dev</h4>
+              <p class="membre-role">Partie : programmation</p>
+              <p>[Écris ici quelques phrases : ce que tu as fait, ce que tu as appris, un message que tu voudrais faire passer.]</p>
+            </div>  
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUIZ ================= -->
+    <section class="section" id="quiz">
+      <div class="container">
+        <h2 class="section-title">Quiz : testez vos connaissances</h2>
+        <p class="section-intro">Agriculture, perturbateurs endocriniens et biodiversité : 20 questions pour vérifier ce que vous avez appris sur le site.</p>
+
+        <div class="quiz" id="quizBox">
+
+          <!-- Écran de départ -->
+          <div class="quiz-start" id="quizStart">
+            <p class="quiz-start-text">20 questions • 2 parties • réponse corrigée après chaque question</p>
+            <button class="btn-quiz" id="quizBegin" type="button">Commencer le quiz</button>
+          </div>
+
+          <!-- Questions -->
+          <div class="quiz-play" id="quizPlay" hidden>
+            <div class="quiz-top">
+              <span class="quiz-part" id="quizPart"></span>
+              <span class="quiz-count" id="quizCount"></span>
+            </div>
+            <div class="quiz-progress"><div class="quiz-progress-bar" id="quizBar"></div></div>
+
+            <h3 class="quiz-question" id="quizQuestion"></h3>
+            <p class="quiz-hint" id="quizHint" hidden>Plusieurs réponses possibles : cochez-les toutes puis validez.</p>
+
+            <div class="quiz-options" id="quizOptions"></div>
+
+            <p class="quiz-feedback" id="quizFeedback" role="status" aria-live="polite"></p>
+
+            <div class="quiz-actions">
+              <button class="btn-quiz" id="quizValidate" type="button" hidden>Valider</button>
+              <button class="btn-quiz" id="quizNext" type="button" hidden>Question suivante</button>
+            </div>
+          </div>
+
+          <!-- Résultat -->
+          <div class="quiz-end" id="quizEnd" hidden>
+            <p class="quiz-score" id="quizScore"></p>
+            <p class="quiz-message" id="quizMessage"></p>
+            <div class="quiz-review" id="quizReview"></div>
+            <button class="btn-quiz" id="quizRestart" type="button">Recommencer le quiz</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOT ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo"><img src="Logo.jpeg" alt=""></div>
+        <h3>AgriSafe</h3>
+        <p>Projet de SVT – Prépa intégrée ingénieur.<br>Comprendre les perturbateurs endocriniens et protéger l'agriculture réunionnaise.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#temoignage">Témoignage</a></li>
+          <li><a href="#science">Partie scientifique</a></li>
+          <li><a href="#effets">Effets</a></li>
+          <li><a href="#conseils">Conseils</a></li>
+          <li><a href="#equipe">L'équipe</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Sources</h3>
+        <ul>
+          <li>ANSES</li>
+          <li>INSERM</li>
+          <li>OMS</li>
+        </ul>
+        <p class="small">À compléter avec vos sources exactes.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 AgriSafe – Projet scolaire – Réalisé par [vos noms]</div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Retour en haut">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
