@@ -25,56 +25,73 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   /* ---------- Carrousel ---------- */
-  const carousel = document.getElementById("carousel");
-  const carouselArea = carousel.parentElement;
-  const slides = carousel.querySelectorAll(".slide");
-  const dotsContainer = document.getElementById("carouselDots");
-  let current = 0;
-  let autoPlay;
+/* ==========================================================
+   CARROUSEL « Comprendre l'exposition »
+   ========================================================== */
+(function () {
+  var AUTOPLAY_MS = 0;   // 0 = pas de défilement automatique ; mets 10000 pour 10 secondes
+
+  var root = document.getElementById("expoCarousel");
+  if (!root) return;
+
+  var slides  = root.querySelectorAll(".expo-slide");
+  var dotsBox = root.querySelector(".expo-dots");
+  var prevBtn = root.querySelector(".expo-prev");
+  var nextBtn = root.querySelector(".expo-next");
+  var counter = root.querySelector(".expo-counter");
+  var current = 0;
+  var timer = null;
 
   // Création des points de navigation
-  slides.forEach((_, i) => {
-    const dot = document.createElement("button");
+  var dots = [];
+  slides.forEach(function (_, i) {
+    var dot = document.createElement("button");
+    dot.type = "button";
     dot.setAttribute("aria-label", "Aller à la diapositive " + (i + 1));
-    dot.addEventListener("click", () => { goTo(i); restartAuto(); });
-    dotsContainer.appendChild(dot);
+    dot.addEventListener("click", function () { goTo(i); restart(); });
+    dotsBox.appendChild(dot);
+    dots.push(dot);
   });
-  const dots = dotsContainer.querySelectorAll("button");
 
   function goTo(index) {
-    slides[current].classList.remove("active");
-    dots[current].classList.remove("active");
     current = (index + slides.length) % slides.length;
-    slides[current].classList.add("active");
-    dots[current].classList.add("active");
+    slides.forEach(function (slide, i) {
+      var active = i === current;
+      slide.classList.toggle("is-active", active);
+      slide.setAttribute("aria-hidden", active ? "false" : "true");
+      dots[i].classList.toggle("is-active", active);
+    });
+    counter.textContent = (current + 1) + " / " + slides.length;
   }
 
-  function startAuto() { autoPlay = setInterval(() => goTo(current + 1), 6000); }
-  function restartAuto() { clearInterval(autoPlay); startAuto(); }
+  function start()   { if (AUTOPLAY_MS > 0) timer = setInterval(function () { goTo(current + 1); }, AUTOPLAY_MS); }
+  function stop()    { clearInterval(timer); }
+  function restart() { stop(); start(); }
 
-  document.getElementById("prevBtn").addEventListener("click", () => { goTo(current - 1); restartAuto(); });
-  document.getElementById("nextBtn").addEventListener("click", () => { goTo(current + 1); restartAuto(); });
+  prevBtn.addEventListener("click", function () { goTo(current - 1); restart(); });
+  nextBtn.addEventListener("click", function () { goTo(current + 1); restart(); });
 
-  // Pause au survol
-  carouselArea.addEventListener("mouseenter", () => clearInterval(autoPlay));
-  carouselArea.addEventListener("mouseleave", startAuto);
-
-  // Navigation clavier
-  document.addEventListener("keydown", e => {
-    if (e.key === "ArrowLeft") { goTo(current - 1); restartAuto(); }
-    if (e.key === "ArrowRight") { goTo(current + 1); restartAuto(); }
+  // Clavier (quand le carrousel a le focus)
+  root.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft")  { goTo(current - 1); restart(); }
+    if (e.key === "ArrowRight") { goTo(current + 1); restart(); }
   });
 
-  // Swipe tactile
-  let touchStartX = 0;
-  carousel.addEventListener("touchstart", e => { touchStartX = e.changedTouches[0].screenX; });
-  carousel.addEventListener("touchend", e => {
-    const diff = e.changedTouches[0].screenX - touchStartX;
-    if (Math.abs(diff) > 50) { goTo(diff > 0 ? current - 1 : current + 1); restartAuto(); }
-  });
+  // Glissement du doigt sur téléphone
+  var startX = 0;
+  root.addEventListener("touchstart", function (e) { startX = e.changedTouches[0].screenX; }, { passive: true });
+  root.addEventListener("touchend", function (e) {
+    var diff = e.changedTouches[0].screenX - startX;
+    if (Math.abs(diff) > 50) { goTo(diff > 0 ? current - 1 : current + 1); restart(); }
+  }, { passive: true });
+
+  // Pause quand la souris est dessus (utile seulement avec le défilement automatique)
+  root.addEventListener("mouseenter", stop);
+  root.addEventListener("mouseleave", start);
 
   goTo(0);
-  startAuto();
+  start();
+  })();
 
   /* ---------- Effets : ouverture au toucher (mobile) ---------- */
   const effects = document.querySelectorAll(".effect");
