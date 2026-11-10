@@ -168,57 +168,126 @@ ul { list-style: none; }
 .video-wide { max-width: 860px; margin: 0 auto; }
 .video-caption { padding: 0.5rem 1rem; background: var(--white); font-size: 0.9rem; font-style: italic; color: var(--muted); }
 
-/* ---------- Carrousel ---------- */
-.carousel-area {
+/* ==========================================================
+   CARROUSEL « Comprendre l'exposition »
+   (toutes les classes commencent par expo- : pas de conflit)
+   ========================================================== */
+.expo-carousel {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white, #fff);
+  border: 3px solid var(--line, #14213d);
+  border-radius: 12px;
+  box-shadow: 8px 8px 0 var(--green-soft, #dff3e6);
+  outline: none;
+}
+.expo-carousel:focus-visible { outline: 3px solid var(--sand, #f6c453); outline-offset: 3px; }
+
+/* Toutes les diapos sont empilées dans la même case de grille :
+   la hauteur s'adapte à la plus longue, donc rien n'est coupé. */
+.expo-viewport { display: grid; }
+.expo-slide {
+  grid-area: 1 / 1;
+  padding: clamp(1.2rem, 4vw, 2.2rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+.expo-slide.is-active { opacity: 1; visibility: visible; }
+
+.expo-slide h3 {
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+  line-height: 1.3;
+  color: var(--blue-dark, #0b2a7a);
+  margin-bottom: 0.3rem;
+}
+.expo-source {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.1rem 0.8rem;
+  border-radius: 50px;
+  background: var(--green-soft, #dff3e6);
+  color: var(--green-dark, #17653c);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.expo-slide p { margin: 0.6rem 0; }
+
+/* Listes */
+.expo-list { list-style: none; margin: 0.8rem 0 0; padding: 0; }
+.expo-list li { position: relative; margin-bottom: 0.7rem; padding-left: 1.6rem; }
+.expo-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.6em;
+  width: 0.65rem; height: 0.65rem;
+  border-radius: 50%;
+  background: var(--green, #2e9e5b);
+}
+
+/* Chiffres clés (diapo 3) */
+.expo-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin: 1rem 0; }
+.expo-stat {
+  padding: 0.8rem;
+  text-align: center;
+  background: var(--bg-tint, #f2f7fc);
+  border: 2px solid var(--line, #14213d);
+  border-radius: 10px;
+}
+.expo-stat strong { display: block; font-size: 1.35rem; line-height: 1.2; color: var(--blue, #1346d8); }
+.expo-stat span { font-size: 0.82rem; line-height: 1.3; color: var(--muted, #5a6b7d); }
+
+/* Tableau (diapo 4) */
+.expo-table-wrap { margin-top: 1rem; overflow-x: auto; }
+.expo-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.expo-table th { padding: 0.6rem 0.8rem; text-align: left; background: var(--blue-dark, #0b2a7a); color: #fff; }
+.expo-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #d4deea; vertical-align: top; }
+.expo-table tbody tr:nth-child(even) { background: var(--bg-tint, #f2f7fc); }
+.expo-table td:last-child { font-weight: 600; color: var(--green-dark, #17653c); }
+
+/* Commandes */
+.expo-controls {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  max-width: 960px;
-  margin: 0 auto;
+  padding: 0.9rem 1.2rem;
+  border-top: 3px solid var(--line, #14213d);
+  background: var(--bg-tint, #f2f7fc);
+  border-radius: 0 0 9px 9px;
 }
-.carousel {
-  position: relative;
-  flex: 1;
-  height: 440px;
-  border: 3px solid var(--line);
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--blue-dark);
-  box-shadow: var(--shadow);
-}
-.slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.7s ease; }
-.slide.active { opacity: 1; z-index: 1; }
-.slide img { width: 100%; height: 100%; object-fit: cover; background: #c9d6ea; }
-.slide-caption {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  padding: 3rem 2rem 1.6rem;
-  color: var(--white);
-  background: linear-gradient(transparent, rgba(5, 15, 50, 0.9));
-}
-.slide-caption h3 { font-size: 1.4rem; margin-bottom: 0.2rem; }
-.carousel-btn {
+.expo-btn {
   flex: none;
-  width: 46px; height: 46px;
-  border: 3px solid var(--line);
+  width: 44px; height: 44px;
+  border: 3px solid var(--line, #14213d);
   border-radius: 50%;
-  background: var(--white);
-  color: var(--blue-dark);
+  background: var(--white, #fff);
+  color: var(--blue-dark, #0b2a7a);
   font-size: 1.1rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, transform 0.2s;
 }
-.carousel-btn:hover { background: var(--green); color: var(--white); transform: scale(1.08); }
-.carousel-dots { display: flex; justify-content: center; gap: 12px; margin-top: 1.2rem; }
-.carousel-dots button {
+.expo-btn:hover { background: var(--green, #2e9e5b); color: #fff; transform: scale(1.08); }
+.expo-btn:focus-visible { outline: 3px solid var(--sand, #f6c453); outline-offset: 2px; }
+
+.expo-nav { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+.expo-dots { display: flex; gap: 10px; }
+.expo-dots button {
   width: 13px; height: 13px;
+  padding: 0;
   border: none;
   border-radius: 50%;
-  background: var(--blue-soft);
+  background: var(--blue-soft, #a9b8ea);
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
 }
-.carousel-dots button.active { background: var(--green); transform: scale(1.35); }
+.expo-dots button.is-active { background: var(--green, #2e9e5b); transform: scale(1.35); }
+.expo-counter { font-size: 0.82rem; font-weight: 600; color: var(--muted, #5a6b7d); }
+
+@media (max-width: 700px) {
+  .expo-stats { grid-template-columns: 1fr; }
+  .expo-table { font-size: 0.85rem; }
+}
 
 /* ---------- Texte + schéma ---------- */
 .text-image { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: center; }
@@ -238,7 +307,7 @@ ul { list-style: none; }
 /* ---------- Effets ---------- */
 .effects-stage {
   position: relative;
-  max-width: 940px;
+  max-width: 1000px;
   height: 600px;
   margin: 0 auto;
   border: 3px solid var(--line);
@@ -247,24 +316,39 @@ ul { list-style: none; }
 }
 .effects-img {
   position: absolute;
-  left: 50%; bottom: 0;
+  left: 50%;
+  bottom: 5%;
   transform: translateX(-50%);
-  height: 96%;
+  height: 90%;
   width: auto;
-  max-width: 40%;
+  max-width: 38%;
   object-fit: contain;
 }
+
 .effect {
   position: absolute;
+  top: var(--y);
   display: flex;
   align-items: center;
-  width: var(--w);
+  width: var(--x);
+  transform: translateY(-50%);
   cursor: pointer;
   outline: none;
   z-index: 3;
 }
-.effect.left { left: 0; flex-direction: row; }
-.effect.right { right: 0; flex-direction: row-reverse; }
+
+.effect.left {
+  left: 0;
+  flex-direction: row;
+}
+
+.effect.right {
+  left: var(--x);
+  right: 0;
+  width: auto;
+  flex-direction: row-reverse;
+}
+
 .effect-label {
   flex: none;
   max-width: 190px;
@@ -519,4 +603,120 @@ ul { list-style: none; }
   .membre { flex-direction: column; text-align: center; }
   .membre-photo { width: 200px; height: 200px; }
   .quiz-actions { justify-content: center; }
+}
+
+/* ==========================================================
+   PARTIE SCIENTIFIQUE : blocs, tableaux, cartes, encadrés
+   ========================================================== */
+
+/* ---------- Blocs et titres ---------- */
+.sci-block { margin-top: 3rem; }
+.sci-block p { margin-bottom: 1rem; }
+.sci-h3 {
+  margin-bottom: 1.2rem;
+  padding-left: 0.9rem;
+  border-left: 6px solid var(--green);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.3;
+  color: var(--blue-dark);
+}
+.sci-h4 { margin: 1.5rem 0 0.7rem; font-size: 1.1rem; color: var(--blue-dark); }
+
+/* ---------- Tableaux ---------- */
+.sci-table-wrap { margin: 1rem 0 1.5rem; overflow-x: auto; border: 3px solid var(--line); border-radius: 10px; background: var(--white); }
+.sci-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 0.92rem; line-height: 1.5; }
+.sci-table th { padding: 0.7rem 0.9rem; text-align: left; background: var(--blue-dark); color: #fff; }
+.sci-table td { padding: 0.7rem 0.9rem; vertical-align: top; border-bottom: 1px solid #d4deea; }
+.sci-table tbody tr:last-child td { border-bottom: none; }
+.sci-table tbody tr:nth-child(even) { background: var(--bg-tint); }
+.sci-table td:first-child { color: var(--blue-dark); white-space: nowrap; }
+
+/* ---------- Liste numérotée (5 modes d'action) ---------- */
+.mode-list { list-style: none; counter-reset: mode; margin: 1rem 0 0; padding: 0; }
+.mode-list li {
+  counter-increment: mode;
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding: 0.8rem 1rem 0.8rem 3.4rem;
+  background: var(--white);
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.mode-list li::before {
+  content: counter(mode);
+  position: absolute;
+  left: 0.8rem; top: 0.8rem;
+  width: 1.8rem; height: 1.8rem;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ---------- Cartes ---------- */
+.sci-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; }
+.two-cols  { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; margin: 1.5rem 0; }
+.sci-card {
+  padding: 1.2rem 1.4rem;
+  background: var(--white);
+  border: 3px solid var(--line);
+  border-top: 8px solid var(--green);
+  border-radius: 10px;
+}
+.sci-card-wide { grid-column: 1 / -1; }
+.sci-card-blue { border-top-color: var(--blue); }
+.sci-card-ko   { border-top-color: #c62828; }
+.sci-card h4 { margin-bottom: 0.7rem; font-size: 1.1rem; line-height: 1.3; color: var(--blue-dark); }
+.sci-card p:last-child { margin-bottom: 0; }
+.sci-card .check-list, .sci-card .cross-list { margin-bottom: 0; }
+.sci-card .check-list li:last-child, .sci-card .cross-list li:last-child { margin-bottom: 0; }
+
+/* Liste avec croix rouges */
+.cross-list { list-style: none; margin: 0 0 1rem; padding: 0; }
+.cross-list li { position: relative; padding-left: 2rem; margin-bottom: 0.6rem; }
+.cross-list li::before { content: "✖"; position: absolute; left: 0; color: #c62828; font-weight: 700; }
+
+/* ---------- Encadrés ---------- */
+.callout {
+  margin: 1.2rem 0;
+  padding: 1rem 1.3rem;
+  background: var(--white);
+  border: 3px solid var(--line);
+  border-left-width: 10px;
+  border-radius: 10px;
+}
+.callout-title { display: block; margin-bottom: 0.3rem; color: var(--blue-dark); }
+.callout p:last-child { margin-bottom: 0; }
+.callout-info { border-left-color: var(--blue);  background: #eef3ff; }
+.callout-warn { border-left-color: var(--sand);  background: #fff8e6; }
+.callout-ok   { border-left-color: var(--green); background: var(--green-soft); }
+
+/* ---------- Synthèse finale ---------- */
+.sci-quote {
+  margin: 3rem 0 0;
+  padding: 1.8rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--blue-dark), var(--green-dark));
+  color: #fff;
+}
+.sci-quote span {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  padding: 0.1rem 0.9rem;
+  border-radius: 50px;
+  background: var(--sand);
+  color: var(--blue-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.sci-quote p { margin: 0; font-size: 1.1rem; line-height: 1.6; }
+
+/* ---------- Téléphone ---------- */
+@media (max-width: 800px) {
+  .sci-cards, .two-cols { grid-template-columns: 1fr; }
+  .sci-card-wide { grid-column: auto; }
+  .sci-quote { padding: 1.4rem 1.2rem; }
 }
