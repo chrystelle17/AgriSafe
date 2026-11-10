@@ -61,9 +61,7 @@
       <div class="container">
         <h2 class="section-title">Partie scientifique</h2>
         <p class="section-intro">
-          Un <strong>perturbateur endocrinien</strong> est une substance étrangère à l'organisme qui altère le
-          fonctionnement du système hormonal et peut entraîner des effets néfastes sur la santé.
-          Pour poser les bases, regardez cette courte vidéo.
+          Pour commencer, Qu'est ce que c'est qu'un <strong>perturbateur endocrinien</strong> ? 
         </p>
         <div class="video-box video-wide">
           <video controls preload="metadata">
@@ -83,137 +81,375 @@
         <p class="section-intro">
           Pour bien comprendre ce qui se joue sur notre île, il faut regarder les chiffres de terrain et les rapports officiels. À La Réunion, le climat tropical humide engendre une forte pression parasitaire sur les cultures, ce qui a longtemps nécessité un recours important aux produits phytosanitaires, notamment dans la canne à sucre.
         </p>
-        <p>
-          Si l'on regarde les données de Santé Publique France et le projet Matphyto (relayé par la DAAF), on observe que <strong>près de 88 % des travailleurs de la canne à sucre</strong> sur l'île ont été exposés à au moins un pesticide toxique, ce qui représente environ 6 300 personnes (4 600 hommes et 1 700 femmes). 
-        </p>
-        <p>
-          Parmi les substances les plus massivement utilisées et suivies sur nos terres, on retrouve des herbicides majeurs comme le <strong>glyphosate</strong> (environ 5 000 personnes exposées) et le <strong>2,4-D</strong> (environ 6 300 personnes exposées), mais aussi la mésotrione et le S-métolachlore, maintenant ainsi une imprégnation continue au cœur de nos exploitations.
-        </p>
+        <!-- ================= CARROUSEL : COMPRENDRE L'EXPOSITION ================= -->
+        <div class="expo-carousel" id="expoCarousel" tabindex="0" role="region" aria-roledescription="carrousel" aria-label="Comprendre l'exposition">
 
-        <div class="carousel-area">
-          <button class="carousel-btn prev" id="prevBtn" aria-label="Diapositive précédente">&#10094;</button>
+        <div class="expo-viewport">
 
-          <div class="carousel" id="carousel">
-            <div class="slide active">
-              <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "exposition-cutanee.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
-              <img src="exposition-cutanee.jpg" alt="Exposition par la peau">
-              <div class="slide-caption">
-                <h3>Par la peau</h3>
-                <p>Préparation de la bouillie, épandage, nettoyage du matériel : les produits traversent la peau, surtout sans gants ni combinaison.</p>
-              </div>
-            </div>
-            <div class="slide">
-              <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "exposition-respiratoire.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
-              <img src="exposition-respiratoire.jpg" alt="Exposition par inhalation">
-              <div class="slide-caption">
-                <h3>Par inhalation</h3>
-                <p>Gouttelettes et vapeurs pulvérisées sont respirées, surtout par vent ou dans les serres et hangars fermés.</p>
-              </div>
-            </div>
-            <div class="slide">
-              <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "exposition-digestive.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
-              <img src="exposition-digestive.jpg" alt="Exposition par ingestion">
-              <div class="slide-caption">
-                <h3>Par ingestion</h3>
-                <p>Manger, boire ou fumer avec des mains souillées, ou consommer des aliments contaminés.</p>
-              </div>
-            </div>
-            <div class="slide">
-              <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "exposition-environnement.jpg" sur GitHub, à côté de index.html ⬇⬇ -->
-              <img src="exposition-environnement.jpg" alt="Contamination de l'environnement">
-              <div class="slide-caption">
-                <h3>Par l'environnement</h3>
-                <p>Eau, sol et air peuvent être pollués : familles et riverains sont aussi concernés.</p>
-              </div>
-            </div>
-          </div>
+        <!-- ===== DIAPO 1 ===== -->
+        <article class="expo-slide is-active">
+          <h3>Une étude d'exposition professionnelle : la canne à sucre</h3>
+          <p class="expo-source">Johan Spinosi &amp; Santé publique France</p>
+          <p>L'évaluation rétrospective des expositions aux pesticides des travailleurs agricoles est une démarche nécessaire pour comprendre et établir des liens entre leurs activités professionnelles tout le long de leur carrière et la survenue de potentielles pathologies telles les cancers ou les maladies neurodégénératives. Les données fiables, produites par une méthode précise et structurée pour dresser l'historique des expositions professionnelles, sont peu nombreuses.</p>
+          <p>La canne à sucre, la culture agricole la plus répandue à La Réunion, emploie de nombreux produits phytopharmaceutiques (PPP) auxquels sont exposés les travailleurs agricoles. Aucune étude jusqu'alors n'avait permis d'identifier le nombre de ces travailleurs, les PPP auxquels ils sont et/ou ont été exposés au cours du temps ni les éventuels effets sur la santé susceptibles de se produire face à cette exposition.</p>
+        </article>
 
-          <button class="carousel-btn next" id="nextBtn" aria-label="Diapositive suivante">&#10095;</button>
+        <!-- ===== DIAPO 2 ===== -->
+        <article class="expo-slide">
+          <h3>Les trois bases de données utilisées</h3>
+          <p>Trois bases de données, dont deux construites par Santé publique France, ont été utilisées pour répondre à la question : quels sont les PPP qui ont été appliqués sur la canne à sucre au cours des dernières décennies à l'île de La Réunion, quels sont leurs effets sanitaires et quelles sont les caractéristiques de la population de travailleurs agricoles concernés ?</p>
+          <ul class="expo-list">
+            <li><strong>Matrice Culture-Exposition (MCE) :</strong> spécifique à la culture de la canne à sucre à La Réunion, elle a permis d'identifier l'ensemble des PPP utilisés sur cette culture depuis les années 1960 ainsi que la fréquence et la probabilité de leur usage.</li>
+            <li><strong>Base CipaTox :</strong> établie pour recenser les effets sanitaires de l'ensemble des substances actives (SA) des PPP homologués en France depuis 1961, avec un focus sur la cancérogénicité, la mutagénicité et la reprotoxicité (CMR) ainsi que la perturbation endocrinienne (PE).</li>
+            <li><strong>Recensements Agricoles (RA) :</strong> recensements de 1981, 1989, 2000 et 2010 ayant permis d'identifier les caractéristiques sociodémographiques des travailleurs de la canne à sucre à La Réunion.</li>
+          </ul>
+        </article>
+
+        <!-- ===== DIAPO 3 ===== -->
+        <article class="expo-slide">
+        <h3>Les résultats de l'étude</h3>
+        <p>En croisant ces trois sources de données, des prévalences d'exposition professionnelle ont été calculées sur les quatre années du RA aux PPP utilisés sur la canne à sucre à La Réunion, et les effets sanitaires qu'ils peuvent engendrer ont été identifiés.</p>
+        <div class="expo-stats">
+          <div class="expo-stat"><strong>25</strong><span>substances actives utilisées : 19 herbicides, 3 insecticides, 2 rodonticides et 1 fongicide</span></div>
+          <div class="expo-stat"><strong>44 % → 88 %</strong><span>des travailleurs exposés à au moins une substance CMR ou PE (1981 → 2010)</span></div>
+          <div class="expo-stat"><strong>16 777 → 7 194</strong><span>travailleurs de la canne à sucre (1981 → 2010)</span></div>
         </div>
-        <div class="carousel-dots" id="carouselDots"></div>
-      </div>
-    </section>
+        <p>Ces travaux montrent qu'en 1981, 1989, 2000 et 2010, 25 substances actives différentes ont été utilisées sur la canne à sucre, dont 19 herbicides, 3 insecticides, 2 rodonticides et 1 fongicide. Les principales molécules sont le 2,4-D, l'amétryne, l'atrazine, Beauveria tenella 96, le chlorpyriphos-éthyl, le diuron et le glyphosate.</p>
+        <p>Entre 44 % (1981) et 88 % (2010) des travailleurs de la canne à sucre à La Réunion, dont le nombre est passé de 16 777 (1981) à 7 194 (2010) individus, ont été exposés à au moins une substance toxique pour la santé humaine et considérée comme CMR ou PE.</p>
+      </article>
+
+        <!-- ===== DIAPO 4 ===== -->
+      <article class="expo-slide">
+        <h3>Synthèse de la situation à La Réunion</h3>
+        <p class="expo-source">Programme Matphyto-DOM</p>
+        <p>Le programme Matphyto-DOM de Santé publique France a reconstitué l'exposition professionnelle des travailleurs de la canne à sucre à La Réunion entre 1960 et 2014. Il identifie 25 à 28 substances actives selon les années, dont 19 herbicides, avec notamment le 2,4-D, l'amétryne, l'atrazine, le chlorpyriphos-éthyl, le diuron et le glyphosate.</p>
+        <div class="expo-table-wrap">
+          <table class="expo-table">
+            <thead><tr><th>Indicateur réunionnais</th><th>Donnée reconstituée</th></tr></thead>
+            <tbody>
+              <tr><td>Travailleurs de canne exposés à au moins une substance CMR ou PE</td><td>44 % en 1981 ; 88 % en 2010</td></tr>
+              <tr><td>Effectif potentiellement concerné</td><td>Environ 6 300 à 10 000 personnes sur la période étudiée</td></tr>
+              <tr><td>Femmes exposées aux PE/reprotoxiques</td><td>Plus de 25 % des travailleurs agricoles concernés</td></tr>
+              <tr><td>Glyphosate appliqué sur canne, 1977–2014</td><td>Environ 232 tonnes</td></tr>
+              <tr><td>Part des pesticides canne potentiellement cancérogènes, reprotoxiques ou PE</td><td>Environ 50 % selon la synthèse de Santé publique France</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+        <!-- ===== DIAPO 5 ===== -->
+      <article class="expo-slide">
+        <h3>Contamination environnementale et données hydrogéologiques</h3>
+          <p class="expo-source">BRGM / COLUMA</p>
+          <p>La contamination n'est pas limitée au champ : elle concerne aussi les eaux superficielles et souterraines, avec des molécules persistantes ou leurs métabolites.</p>
+          <ul class="expo-list">
+            <li>Entre 1999 et 2010, 73 substances ont été détectées dans les eaux douces réunionnaises (sur 398 recherchées), dont 35 herbicides ou métabolites ; 17 étaient liés au désherbage de la canne.</li>
+            <li>Les herbicides de la canne, glyphosate inclus, expliquaient 80 % des dépassements du seuil de potabilité de 0,1 µg/L.</li>
+            <li>L'atrazine et le diuron, pourtant interdits ou largement sortis d'usage, ont contribué à 80 % des pollutions avérées et 67 % des dépassements, illustrant la persistance historique de ces composés.</li>
+            <li>Des suivis plus récents rapportent la présence chronique d'atrazine, glyphosate, métolachlore et 2,4-D dans des ravines et captages réunionnais.</li>
+          </ul>
+      </article>
+    </div>
+
+
+    <!-- Commandes : flèche, points (créés par le JS), flèche -->
+    <div class="expo-controls">
+      <button type="button" class="expo-btn expo-prev" aria-label="Diapositive précédente"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8"/></svg></button>
+      <div class="expo-nav">
+      <div class="expo-dots"></div>
+      <span class="expo-counter" aria-live="polite"></span>
+    </div>
+    <button type="button" class="expo-btn expo-next" aria-label="Diapositive suivante"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8"/></svg></button>
+    </div>
+    </div>
+
+    <!-- ============ SOUS LE CARROUSEL ============ -->
+  <div class="sci-block">
+    <h3 class="sci-h3">Les voies d'exposition</h3>
+    <p>Cela crée plusieurs voies d'exposition : <strong>professionnelle</strong> lors de la manipulation et de l'épandage, <strong>résidentielle</strong> par dérive et poussières, <strong>alimentaire</strong>, et <strong>hydrique</strong>. L'exposition est donc souvent multimoléculaire et chronique, ce qui complique l'attribution à une seule substance.</p>
+    <p>L'inertie des transferts s'explique par le temps moyen de résidence des eaux souterraines dans les bassins d'alimentation de captage (BAC), mesuré entre 24 et 50 ans (via les traceurs CFC-12, CFC-113 et SF6). Une eau infiltrée aujourd'hui ne se retrouvera dans les forages profonds que des décennies plus tard.</p>
+  </div>
+
+  <div class="sci-block">
+    <h3 class="sci-h3">Tableau des molécules prioritaires à La Réunion</h3>
+    <div class="sci-table-wrap">
+      <table class="sci-table">
+        <thead>
+          <tr><th>Molécule</th><th>Usage / contexte réunionnais</th><th>Propriété endocrinienne ou toxicologique majeure</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Atrazine</strong></td><td>Herbicide historique de la canne, encore détectée dans l'environnement malgré son interdiction en 2003.</td><td>Perturbe la stéroïdogenèse, notamment l'aromatase CYP19A1 ; effets sur les axes hypothalamo-hypophysaires.</td></tr>
+          <tr><td><strong>2,4-D</strong></td><td>Herbicide largement utilisé sur canne (représente à lui seul 50 % de l'IFT herbicides).</td><td>Classé parmi les substances cancérogènes dans l'évaluation réunionnaise ; son rôle endocrinien direct reste moins bien caractérisé que celui de l'atrazine.</td></tr>
+          <tr><td><strong>Diuron</strong></td><td>Herbicide historique de la canne, très persistant dans l'eau (interdit en 2008).</td><td>Classé cancérogène dans l'évaluation réunionnaise ; contamination aquatique durable.</td></tr>
+          <tr><td><strong>Glyphosate</strong></td><td>Herbicide majeur de la canne ; 232 tonnes estimées sur 1977–2014.</td><td>Données en faveur d'effets métaboliques expérimentaux, mais preuve endocrinienne humaine encore hétérogène.</td></tr>
+          <tr><td><strong>Chlorpyriphos-éthyl</strong></td><td>Insecticide organophosphoré recensé dans les usages canne.</td><td>Neurotoxicité cholinergique documentée ; perturbation endocrinienne possible mais moins centralisée dans les données disponibles.</td></tr>
+          <tr><td><strong>Métolachlore</strong></td><td>Herbicide détecté dans les eaux réunionnaises.</td><td>Classé cancérogène dans l'évaluation réunionnaise ; mécanismes endocriniens moins établis que pour l'atrazine.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  </div>
+
+  </section>
+
 
     <!-- 2. Comment agissent-ils ? -->
-    <section class="section section-tint" id="action">
-      <div class="container">
-        <h2 class="section-title"><span class="num">2</span> Comment agissent-ils&nbsp;?</h2>
-        <p class="section-intro">
-          Mais concrètement, que se passe-t-il dans l'organisme à l'échelle moléculaire lorsqu'on manipule ou que l'on côtoie ces substances ? Les pesticides et polluants du quotidien agissent comme de puissants perturbateurs endocriniens.
-        </p>
+<!-- ============ 2. COMMENT AGISSENT-ILS ? ============ -->
+  <section class="section section-tint" id="action">
+    <div class="container">
+      <h2 class="section-title"><span class="num">2</span> Comment agissent-ils&nbsp;?</h2>
+
+      <!-- ---------- 2.1 ---------- -->
+      <div class="sci-block">
+        <h3 class="sci-h3">Est-ce que tous les PE agissent pareil ? Modes d'action et diversité</h3>
 
         <div class="text-image">
           <div class="text-block">
-            <p>Le système endocrinien produit des <strong>hormones</strong>, des messagers chimiques qui régulent la croissance, le métabolisme, la reproduction ou l'humeur. Chaque hormone se fixe sur un <strong>récepteur</strong> précis, comme une clé dans une serrure.</p>
-            <p>Appartenant à des familles chimiques (organophosphorés, pyréthrinoïdes...), ces molécules xénobiotiques possèdent des structures proches de nos hormones et interfèrent de trois façons majeures :</p>
-            <ul class="check-list">
-              <li><strong>Mimer</strong> une hormone naturelle et activer le récepteur à tort (effet agoniste).</li>
-              <li><strong>Bloquer</strong> le récepteur et empêcher l'hormone d'agir (effet antagoniste).</li>
-              <li><strong>Dérégler</strong> la production, le transport ou l'élimination enzymatique des hormones.</li>
-            </ul>
-            <p>En s'infiltrant ainsi dans l'organisme, parfois à <strong>très faibles doses</strong>, elles dérèglent durablement le métabolisme, la thyroïde, le cerveau et les organes reproducteurs.</p>
+            <p><strong>Non, les perturbateurs endocriniens n'agissent pas tous de la même façon.</strong> Les PE constituent une classe chimiquement et fonctionnellement très hétérogène. Le système endocrinien reposant sur un réseau complexe d'hormones, de récepteurs et de boucles de rétroaction, les PE peuvent interférer à plusieurs niveaux distincts :</p>
+              <ol class="mode-list">
+                <li><strong>Interaction directe avec les récepteurs nucléaires (agonisme / antagonisme) :</strong> fixation sur ERα, ERβ, AR, PR, GR, TR, PPARγ ou hPXR. Le récepteur PXR possède une poche de liaison très volumineuse (≥ 1200 Å³) accueillant un très grand nombre de pesticides.</li>
+                <li><strong>Modulation de la biosynthèse hormonale :</strong> inhibition ou stimulation d'enzymes stéroïdogéniques (ex. sur-expression de l'aromatase CYP19A1 par l'atrazine).</li>
+              <li><strong>Modulation de la dégradation hormonale :</strong> altération de la clairance enzymatique ou hépatique des hormones.</li>
+              <li><strong>Modification de la disponibilité circulante :</strong> interaction avec les protéines transporteuses (SHBG, CBG, TBG), altérant la fraction d'hormone libre active.</li>
+              <li><strong>Signalisation membranaire rapide :</strong> activation de récepteurs couplés aux protéines G (ex. GPER pour l'atrazine) déclenchant la voie MAP-kinase (ERK1/2).</li>
+            </ol>
           </div>
           <figure class="image-block">
-            <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "mecanisme-hormonal.png" sur GitHub, à côté de index.html ⬇⬇ -->
-            <img src="mecanisme-hormonal.png" alt="Schéma du mécanisme d'action d'un perturbateur endocrinien">
-            <figcaption>Schéma : le perturbateur se fixe sur le récepteur à la place de l'hormone.</figcaption>
+          <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "mecanisme-hormonal.png" sur GitHub, à côté de index.html ⬇⬇ -->
+          <img src="mecanisme-hormonal.png" alt="Schéma des modes d'action des perturbateurs endocriniens">
+          <figcaption>Schéma : les cinq modes d'action des perturbateurs endocriniens.</figcaption>
           </figure>
         </div>
+    </div>
+
+    <!-- ---------- 2.2 ---------- -->
+    <div class="sci-block">
+      <h3 class="sci-h3">Mécanismes moléculaires détaillés</h3>
+
+      <div class="sci-cards">
+
+        <article class="sci-card">
+          <h4>Récepteurs nucléaires</h4>
+          <p>Les PE peuvent imiter ou bloquer les hormones en interagissant avec des récepteurs nucléaires : récepteurs des œstrogènes (ERα/ERβ), des androgènes (AR), de la progestérone, des glucocorticoïdes (GR), des hormones thyroïdiennes, ou encore PPARγ et ERRγ.</p>
+          <p>Cette interaction peut modifier la transcription de gènes contrôlant la prolifération cellulaire, l'apoptose, la différenciation adipocytaire, la réponse inflammatoire et le métabolisme énergétique.</p>
+        </article>
+
+        <article class="sci-card">
+          <h4>Atrazine : aromatase et GPER</h4>
+          <p>L'atrazine ne se comporte pas nécessairement comme un agoniste direct classique du récepteur des œstrogènes. Son mécanisme le mieux documenté in vitro est l'inhibition de phosphodiestérases, l'augmentation intracellulaire d'AMPc, l'activation de la voie SF-1 et l'induction de CYP19A1, l'aromatase qui convertit les androgènes en œstrogènes.</p>
+          <p>En parallèle, l'atrazine peut activer le récepteur œstrogénique membranaire GPER, entraînant une phosphorylation d'ERK1/2 et l'expression de gènes cibles des œstrogènes ; dans certaines cellules tumorales ovariennes, cette voie GPER–EGFR–ERK favorise la prolifération.</p>
+          <p>Il faut toutefois distinguer mécanisme cellulaire et preuve de cancer humain : les effets sur l'aromatase ont été observés surtout à des concentrations micromolaires dans des lignées cellulaires, et l'EPA considère qu'il n'existe pas de voie neuroendocrinienne établie reliant l'atrazine au cancer humain.</p>
+        </article>
+
+        <article class="sci-card">
+          <h4>Glyphosate : stress oxydatif et mitochondries</h4>
+          <p>Pour le glyphosate, les revues expérimentales rapportent une stéatose hépatique, une inflammation, un stress oxydatif, une dysfonction mitochondriale, une altération du métabolisme du glucose et de la signalisation insulinique, ainsi que des modifications du microbiote intestinal et de voies épigénétiques.</p>
+          <p>Les formulations commerciales, dites « glyphosate-based herbicides » (GBH), peuvent avoir des effets différents du glyphosate seul, notamment parce que les coformulants modifient la pénétration, la stabilité et la biodisponibilité de la molécule.</p>
+          <p>Les effets œstrogéniques du glyphosate restent débattus : certaines études rapportent une activation transcriptionnelle œstrogénique, d'autres non ; l'inhibition de l'aromatase a aussi été observée dans plusieurs modèles.</p>
+        </article>
+
+        <article class="sci-card">
+          <h4>Stress oxydatif, mitochondries et inflammation</h4>
+          <p>Un mécanisme transversal aux PE est la production d'espèces réactives de l'oxygène (ROS), qui endommagent lipides, protéines et ADN. Cela peut activer des voies inflammatoires, altérer la chaîne respiratoire mitochondriale, perturber l'homéostasie du calcium et favoriser l'apoptose cellulaire.</p>
+          <p>Dans le pancréas, ces mécanismes peuvent réduire la fonction des cellules bêta productrices d'insuline ; dans le foie, le muscle et le tissu adipeux, ils peuvent favoriser l'insulinorésistance.</p>
+        </article>
+
+        <article class="sci-card sci-card-wide">
+          <h4>Épigénétique et exposition précoce</h4>
+          <p>Les PE peuvent modifier l'expression des gènes sans changer la séquence ADN, notamment par méthylation de l'ADN, modifications des histones et régulation par microARN. Ces altérations peuvent survenir pendant des périodes de sensibilité développementale et persister au-delà de la période d'exposition.</p>
+          <p>Cela signifie qu'une exposition pendant la grossesse ou la petite enfance peut avoir des conséquences métaboliques ou reproductives plus tardives, même si la personne n'est plus exposée au moment du diagnostic.</p>
+        </article>
+
       </div>
+    </div>
+
+    <!-- ---------- 2.3 ---------- -->
+    <div class="sci-block">
+      <h3 class="sci-h3">Analyse moléculaire : PE agricoles (pesticides) vs PE industriels / domestiques</h3>
+
+      <div class="callout callout-info">
+        <strong class="callout-title">Résumé de la différence moléculaire fondamentale</strong>
+        <p>Les perturbateurs endocriniens industriels (bisphénols, phtalates) agissent principalement comme des <strong>leurres structuraux</strong> en se fixant directement sur les récepteurs hormonaux nucléaires. À l'inverse, les perturbateurs endocriniens issus des pesticides agricoles (herbicides, insecticides, fongicides) agissent préférentiellement de manière <strong>indirecte</strong> en altérant les enzymes de la stéroïdogenèse, en suractivant les récepteurs xénobiotiques métaboliques ou en induisant un stress oxydatif mitochondrial.</p>
+      </div>
+
+      <h4 class="sci-h4">Tableau comparatif des propriétés moléculaires</h4>
+      <div class="sci-table-wrap">
+        <table class="sci-table">
+          <thead>
+            <tr><th>Critère moléculaire</th><th>PE industriels et domestiques (ex. BPA, phtalates)</th><th>PE agricoles (ex. atrazine, 2,4-D, chlorpyriphos)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Conception initiale</strong></td><td>Synthétisés pour la résistance chimique, la plasticité ou la conservation des matériaux.</td><td>Conçus spécifiquement comme biocides réactifs (inhibition d'enzymes ou de canaux biologiques).</td></tr>
+            <tr><td><strong>Structure chimique</strong></td><td>Mimétisme structural direct des hormones (cycles aromatiques, groupes phénoliques rigides).</td><td>Structures hétérocycliques complexes, riches en halogènes (Cl, F) et atomes réactifs (N, S, P).</td></tr>
+            <tr><td><strong>Mécanisme principal</strong></td><td>Liaison directe aux récepteurs nucléaires de l'œstradiol (ERα, ERβ) ou des androgènes (AR).</td><td>Perturbation enzymatique (CYP19A1/aromatase), activation de PXR et altérations mitochondriales.</td></tr>
+            <tr><td><strong>Effet sur les hormones</strong></td><td>Miment ou bloquent directement le signal hormonal sur la cellule cible.</td><td>Accélèrent la dégradation des hormones ou modifient leur taux de production globale.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="two-cols">
+        <article class="sci-card sci-card-blue">
+          <h4>A. Mode d'action des PE industriels (mimétisme direct)</h4>
+          <ul class="check-list">
+            <li><strong>Mimétisme d'œstrogènes (agonisme ER) :</strong> le Bisphénol A (BPA) possède deux cycles phénoliques espacés d'une distance identique à celle de l'œstradiol (E2), lui permettant d'entrer dans la poche de liaison de ERα et d'activer directement le programme génique œstrogénique.</li>
+            <li><strong>Antagonisme des androgènes (AR) :</strong> les phtalates (DEHP, DBP) occupent le récepteur des androgènes sans déclencher la conformation active, bloquant l'action de la testostérone naturelle.</li>
+          </ul>
+        </article>
+
+        <article class="sci-card">
+          <h4>B. Mode d'action des PE agricoles (inhibition enzymatique et voies indirectes)</h4>
+          <ul class="check-list">
+            <li><strong>Inhibition et induction enzymatique (CYP450) :</strong> l'atrazine n'est pas un œstrogène mimétique direct mais induit l'expression de l'enzyme CYP19A1 (aromatase) via la voie AMPc/SF-1, surconvertissant les androgènes en œstrogènes. Certains fongicides triazolés inhibent directement le CYP51 ou le CYP17.</li>
+            <li><strong>Recrutement du récepteur PXR :</strong> le récepteur Pregnane X Receptor (PXR) possède un domaine de liaison très vaste (≥ 1200 Å³). Les pesticides (comme le chlorpyriphos ou la métribuzine) s'y fixent facilement, accélérant la clairance et la dégradation de nombreuses hormones endogènes (ex. hormones thyroïdiennes).</li>
+            <li><strong>Signalisation non-génomique et membranaire :</strong> les formulations d'herbicides activent fréquemment les récepteurs membranaires rapides (ex. GPER) ou déclenchent des cascades de phosphorylation (ERK1/2, MAPK) via un stress oxydatif direct.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="callout callout-ok">
+        <strong class="callout-title">Synthèse des différences de toxicodynamique</strong>
+        <p>Alors que les PE industriels agissent en véritables « leurres hormonaux » capables de tromper directement les récepteurs de l'organisme, les PE agricoles provoquent un dérèglement endocrinien par des cascades indirectes et multi-voies (inhibition d'enzymes de conversion, dégradation accélérée des hormones via PXR, stress oxydatif mitochondrial perturbant la stéroïdogenèse).</p>
+      </div>
+    </div>
+
+    </div>
     </section>
 
     <!-- 3. Effets sur l'organisme -->
-    <section class="section" id="effets">
-      <div class="container">
-        <h2 class="section-title"><span class="num">3</span> Les effets sur l'organisme</h2>
-        <p class="section-intro">
-          Dès lors, quelles sont les conséquences à long terme pour la santé des travailleurs de la terre et de la population réunionnaise&nbsp;?
-        </p>
-        <p>
-          Cette exposition professionnelle chronique perturbe durablement l'équilibre hormonal et provoque des dégâts profonds au niveau cellulaire. Les suivis épidémiologiques menés auprès des agriculteurs exposés au glyphosate et au 2,4-D mettent en évidence un <strong>stress oxydatif majeur</strong> qui endommage l'ADN et affaiblit le système immunitaire.
-        </p>
-        <p>
-          C'est ce mécanisme cellulaire qui explique l'augmentation des risques de troubles de la fertilité, de déséquilibres métaboliques (comme l'obésité liée à la thyroïde) et l'apparition de cancers professionnels, tels que les lymphomes, ou encore la reconnaissance de la maladie de Parkinson.
-        </p>
-        <p>
-          À La Réunion, face à cette réalité scientifique, la protection de notre santé passe impérativement par une prise de conscience globale, que ce soit par la réduction de l'usage des pesticides ou par l'attention portée à notre environnement quotidien.
-        </p>
+    <!-- ============ 3. LES EFFETS SUR L'ORGANISME ============ -->
+  <section class="section" id="effets">
+    <div class="container">
+      <h2 class="section-title"><span class="num">3</span> Les effets sur l'organisme</h2>
+      <p class="section-intro">Survolez ou touchez chaque effet pour en savoir plus.</p>
 
-        <p class="section-intro" style="margin-top: 2rem;">Survolez ou touchez chaque effet pour en savoir plus.</p>
+    <!-- Photo + flèches : --w = distance entre le bord et le point (à ajuster selon ta photo) -->
+      <div class="effects-stage">
+      <img src="agri.jpeg" alt="Agriculteur" class="effects-img">
+      <div class="effect left" style="--x:48%; --y:47%;" tabindex="0"> 
+    <span class="effect-label">Pancréas / diabète de type 2</span>
+    <span class="effect-line"></span><span class="effect-dot"></span>
+    <span class="effect-detail">Altération de la sécrétion d'insuline par les cellules bêta pancréatiques.</span>
+    </div>
 
-        <div class="effects-stage">
-          <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "agriculteur.png" sur GitHub, à côté de index.html ⬇⬇ -->
-          <img src="agriculteur.png" alt="Agriculteur" class="effects-img">
+    <div class="effect left" style="--x:48%; --y:40%;" tabindex="0">
+      <span class="effect-label">Foie</span>
+      <span class="effect-line"></span><span class="effect-dot"></span>
+      <span class="effect-detail">Stéatose hépatique, insulinorésistance hépatique.</span>
+    </div>
 
-          <!-- --w = distance entre le bord et le point (à ajuster selon ta photo) -->
-          <div class="effect left"  style="top:8%;  --w:36%;" tabindex="0">
-            <span class="effect-label">Troubles neurologiques</span><span class="effect-line"></span><span class="effect-dot"></span>
-            <span class="effect-detail">Fatigue, troubles de la mémoire, maladies neurodégénératives.</span>
-          </div>
-          <div class="effect left"  style="top:34%; --w:33%;" tabindex="0">
-            <span class="effect-label">Troubles respiratoires</span><span class="effect-line"></span><span class="effect-dot"></span>
-            <span class="effect-detail">Irritations, asthme, gêne respiratoire liée à l'inhalation des produits.</span>
-          </div>
-          <div class="effect left"  style="top:62%; --w:34%;" tabindex="0">
-            <span class="effect-label">Cancers hormonodépendants</span><span class="effect-line"></span><span class="effect-dot"></span>
-            <span class="effect-detail">Risque accru de cancers de la prostate, des testicules ou du sein.</span>
-          </div>
+    <div class="effect left" style="--x:48%; --y:59%;" tabindex="0">
+      <span class="effect-label">Tissu adipeux / obésité</span>
+      <span class="effect-line"></span><span class="effect-dot"></span>
+      <span class="effect-detail">Inflammation chronique de faible grade, dysfonction du tissu adipeux, insulinorésistance.</span>
+    </div>
 
-          <div class="effect right" style="top:14%; --w:36%;" tabindex="0">
-            <span class="effect-label">Troubles de la thyroïde</span><span class="effect-line"></span><span class="effect-dot"></span>
-            <span class="effect-detail">Dérèglement du métabolisme, fatigue, variations de poids.</span>
-          </div>
-          <div class="effect right" style="top:42%; --w:34%;" tabindex="0">
-            <span class="effect-label">Troubles de la fertilité</span><span class="effect-line"></span><span class="effect-dot"></span>
-            <span class="effect-detail">Baisse de la qualité du sperme, difficultés à concevoir, malformations.</span>
-          </div>
-          <div class="effect right" style="top:70%; --w:35%;" tabindex="0">
-            <span class="effect-label">Troubles cutanés</span><span class="effect-line"></span><span class="effect-dot"></span>
-            <span class="effect-detail">Dermatites, allergies et irritations au contact des produits.</span>
-          </div>
-        </div>
+    <div class="effect right" style="--x:50%; --y:54%;" tabindex="0">
+      <span class="effect-label">Reproduction / développement</span>
+      <span class="effect-line"></span><span class="effect-dot"></span>
+      <span class="effect-detail">Substances reprotoxiques ; effets plus tardifs d'une exposition pendant la grossesse ou la petite enfance.</span>
+    </div>
+
+    <div class="effect right" style="--x:50%; --y:25%;" tabindex="0">
+      <span class="effect-label">Système nerveux</span>
+      <span class="effect-line"></span><span class="effect-dot"></span>
+      <span class="effect-detail">Neurotoxicité cholinergique documentée (chlorpyriphos-éthyl) ; maladies neurodégénératives étudiées chez les travailleurs.</span>
+    </div>
+
+    <div class="effect right" style="top:36%; --x:50%;" tabindex="0">
+      <span class="effect-label">Thyroïde</span>
+      <span class="effect-line"></span><span class="effect-dot"></span>
+      <span class="effect-detail">Dégradation accélérée des hormones thyroïdiennes via PXR.</span>
+    </div>
+
+    <div class="effect right" style="--x:52%; --y:70%;" tabindex="0">
+      <span class="effect-label">Cancers hormono-dépendants</span>
+      <span class="effect-line"></span><span class="effect-dot"></span>
+      <span class="effect-detail">prostate; cancers hématologiques (lymphomes non hodgkiniens, myélomes).</span>
+    </div>
+    </div>
+    </div>
+
+    <!-- ---------- 3.1 ---------- -->
+    <div class="sci-block">
+      <h3 class="sci-h3">Diabète de type 2 et syndrome métabolique</h3>
+      <p>Les données épidémiologiques et expérimentales soutiennent un lien plausible entre certains PE (particulièrement les pesticides organochlorés, PCB, dioxines, PFAS, bisphénols et phtalates) et une altération de la tolérance au glucose ou du risque de diabète de type 2.</p>
+      <p><strong>Les mécanismes proposés sont :</strong></p>
+      <ul class="check-list">
+        <li>Insulinorésistance hépatique, musculaire et adipocytaire.</li>
+        <li>Altération de la sécrétion d'insuline par les cellules bêta pancréatiques.</li>
+        <li>Dysfonction mitochondriale et stress oxydatif.</li>
+        <li>Inflammation chronique de faible grade et dysfonction du tissu adipeux.</li>
+        <li>Perturbation des récepteurs PPARγ, ER, AR, GR et des voies thyroïdiennes.</li>
+      </ul>
+      <div class="callout callout-warn">
+        <strong class="callout-title">⚠️ Attention à l'interprétation pour le diabète à La Réunion</strong>
+        <p>À La Réunion, le diabète a de multiples déterminants : prédisposition génétique, alimentation, sédentarité, obésité, accès aux soins, infections et déterminants sociaux. Les pesticides peuvent être un facteur de risque additionnel, mais ils ne constituent pas une explication unique ni automatique du diabète réunionnais.</p>
       </div>
-    </section>
+    </div>
+
+    <!-- ---------- 3.2 ---------- -->
+    <div class="sci-block">
+      <h3 class="sci-h3">Cancers et carcinogenèse</h3>
+      <p>Les PE peuvent favoriser la cancérogenèse par plusieurs voies : activation ou blocage de récepteurs hormonaux, prolifération cellulaire anormale, stress oxydatif, altération de la réparation de l'ADN, reprogrammation métabolique, inflammation et modifications épigénétiques.</p>
+      <p>Les cancers les plus discutés dans la littérature PE sont hormono-dépendants (sein, prostate, endomètre, ovaire), mais l'exposition professionnelle aux pesticides est aussi associée dans certaines études à un risque accru de cancer de la prostate et de cancers hématologiques (lymphomes non hodgkiniens, myélomes).</p>
+
+      <div class="sci-table-wrap">
+        <table class="sci-table">
+          <thead>
+            <tr><th>Pathologie</th><th>Mécanismes plausibles</th><th>Niveau de certitude</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Cancer du sein</strong></td><td>Signalisation œstrogénique, aromatase, prolifération cellulaire, épigénétique.</td><td>Plausible pour certains PE ; non démontrée de façon causale pour chaque pesticide individuellement.</td></tr>
+            <tr><td><strong>Cancer de la prostate</strong></td><td>Perturbation androgénique, inflammation, stress oxydatif.</td><td>Association professionnelle rapportée pour certains pesticides ; hétérogénéité selon la molécule.</td></tr>
+            <tr><td><strong>Cancers hormono-dépendants</strong></td><td>Mimétisme ou antagonisme hormonal, reprogrammation métabolique, inflammation du tissu adipeux.</td><td>Mécanismes cohérents, mais preuve humaine spécifique souvent limitée.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Pour l'atrazine, la littérature ne soutient pas de façon robuste un effet œstrogénique direct fort ; les tumeurs mammaires observées chez le rat Sprague-Dawley semblent plutôt liées à une modification de l'axe hypothalamo-hypophysaire-ovarien, avec atténuation du pic de LH et exposition prolongée aux œstrogènes endogènes.</p>
+    </div>
+
+    <!-- ---------- 3.3 ---------- -->
+    <div class="sci-block">
+      <h3 class="sci-h3">L'effet cocktail</h3>
+      <p>Le problème central à La Réunion n'est probablement pas une molécule isolée, mais un mélange : glyphosate, 2,4-D, métolachlore, atrazine, diuron, métabolites, insecticides et autres contaminants. Les eaux réunionnaises ont montré jusqu'à <strong>44 pesticides ou métabolites</strong> dans certains sites étudiés.</p>
+      <p>Les effets peuvent être additifs, synergiques ou antagonistes. Par exemple, deux substances faiblement actives seules peuvent perturber ensemble une même voie hormonale, tandis qu'une substance peut amplifier le stress oxydatif produit par une autre. Les évaluations réglementaires classiques, souvent fondées sur une substance seule, ne capturent donc pas entièrement ce risque de mixture.</p>
+    </div>
+
+    <!-- ---------- 3.4 ---------- -->
+    <div class="sci-block">
+      <h3 class="sci-h3">Ce que l'on peut affirmer, et ne pas affirmer</h3>
+      <div class="two-cols">
+        <article class="sci-card">
+          <h4>✅ Établi ou fortement soutenu</h4>
+          <ul class="check-list">
+            <li>Les travailleurs de la canne à La Réunion ont été largement exposés à des pesticides classés CMR ou PE.</li>
+            <li>Les herbicides de canne ont contaminé durablement les eaux réunionnaises.</li>
+            <li>Certains PE perturbent expérimentalement les voies hormonales, mitochondriales, inflammatoires et épigénétiques.</li>
+            <li>Certains PE sont associés épidémiologiquement au diabète, à l'obésité et à certains cancers hormono-dépendants.</li>
+          </ul>
+        </article>
+        <article class="sci-card sci-card-ko">
+          <h4>❌ Non établi</h4>
+          <ul class="cross-list">
+            <li>Qu'un pesticide précis cause directement le diabète ou un cancer chez une personne réunionnaise donnée.</li>
+            <li>Que le glyphosate soit un PE humain démontré avec un mécanisme unique et consensuel.</li>
+            <li>Que l'atrazine provoque un cancer du sein humain via un mécanisme œstrogénique direct.</li>
+            <li>Que la contamination environnementale mesurée dans l'eau se traduise nécessairement, à elle seule, en maladie chez les habitants.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <!-- ---------- CONCLUSION ---------- -->
+    <blockquote class="sci-quote">
+      <span>Synthèse finale en une phrase</span>
+      <p>À La Réunion, l'exposition aux PE agricoles est documentée et biologiquement plausible comme facteur contributif au diabète et à certains cancers, mais la preuve d'un lien causal local, molécule par molécule et personne par personne, reste encore à établir par des études épidémiologiques réunionnaises spécifiques.</p>
+    </blockquote>
+
+  </div>
+  </section>
 
     <!-- ================= VIDÉO EXPLICATIVE ================= -->
     <section class="section section-tint" id="video-explicative">
@@ -230,15 +466,15 @@
     </section>
 
     <!-- ================= CONSEILS ================= -->
-<section class="section" id="conseils">
-  <div class="container">
-    <div class="frame frame-big">
-      <h2 class="frame-title center">Conseils pour réduire l'exposition</h2>
+    <section class="section" id="conseils">
+      <div class="container">
+      <div class="frame frame-big">
+        <h2 class="frame-title center">Conseils pour réduire l'exposition</h2>
 
-      <figure class="image-block advice-schema">
+        <figure class="image-block advice-schema">
         <!-- ⬇⬇ IMAGE À AJOUTER : dépose le fichier "schéma.jpeg" sur GitHub, à côté de index.html ⬇⬇ -->
         <img src="schema2.jpeg" alt="Schéma des bonnes pratiques">
-        <figcaption>Schéma des bonnes pratiques</figcaption>
+      <figcaption>Schéma des bonnes pratiques</figcaption>
       </figure>
       
       <div class="advice-grid">
@@ -302,9 +538,9 @@
               <img src="bap.jpeg" alt="Photo de FONTAINE Baptiste">
             </figure>
             <div class="membre-texte">
-              <h3>FONTAINE Thierry, l'agriculteur</h3>
+              <h3>FONTAINE Baptiste(Thirry), l'agriculteur</h3>
               <p class="membre-role">Partie : Témoignage</p>
-              <p>[Écris ici quelques phrases : ce que tu as fait, ce que tu as appris, un message que tu voudrais faire passer.]</p>
+              <p>j'ai été dans se rôle sans mon consentement...</p>
             </div>
           </article>
 
@@ -317,7 +553,7 @@
             <div class="membre-texte">
               <h3>ANGAMOUTOU Anjali , la scientifique</h3>
               <p class="membre-role">Partie : Partie scientifique</p>
-              <p>[Écris ici quelques phrases : ce que tu as fait, ce que tu as appris, un message que tu voudrais faire passer.]</p>
+              <p>J'ai trouvé cette étude scientifique passionnante  car elle montre la nécessité de protéger la snaté des travailleurs et les ressources de notre île grâce à des pratiques plus durables.</p>
             </div>
           </article>
 
@@ -330,7 +566,7 @@
             <div class="membre-texte">
               <h3>DALLEAU Colleen, la psychologue spécialiste des perturbateurs endocriniens et de la santé agricole</h3>
               <p class="membre-role">Partie : Conseils</p>
-              <p>[Écris ici quelques phrases : ce que tu as fait, ce que tu as appris, un message que tu voudrais faire passer.]</p>
+              <p>Coucouuu! Dans ce travail, j'ai appris que les pertubateurs endocriniens affectés autant les humains que les animaux. Mais qu'il y a des moyens de limites ses effets.</p>
             </div>
           </article>
           
@@ -343,7 +579,7 @@
             <div class="membre-texte">
               <h4>CHRISTINA Océane, la dev</h4>
               <p class="membre-role">Partie : programmation</p>
-              <p>[Écris ici quelques phrases : ce que tu as fait, ce que tu as appris, un message que tu voudrais faire passer.]</p>
+              <p>Salut. En tant que dev, j'ai pu m'imprégné de code autant d'information scientifique!</p>
             </div>  
           </article>
 
@@ -425,14 +661,11 @@
           <li>ANSES</li>
           <li>INSERM</li>
           <li>OMS</li>
-          <li>inrae</li>
-          <li>dumas</li>
-          <li>ecotoxicologie</li>
         </ul>
-        <p class="small"></p>
+        <p class="small">À compléter avec vos sources exactes.</p>
       </div>
     </div>
-    <div class="footer-bottom">&copy; 2026 AgriSafe – Projet scolaire – Réalisé par Anjali, Colleen, Baptiste, Océane</div>
+    <div class="footer-bottom">&copy; 2026 AgriSafe – Projet scolaire – Réalisé par Anjali , Colleen , Baptiste , Océane</div>
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Retour en haut">↑</button>
