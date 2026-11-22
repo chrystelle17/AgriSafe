@@ -130,7 +130,8 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ==========================================================
    QUIZ INTERACTIF
    ========================================================== */
-// answer = indices des bonnes réponses (0 = A, 1 = B, 2 = C, 3 = D)
+(function () {
+   // answer = indices des bonnes réponses (0 = A, 1 = B, 2 = C, 3 = D)
 const PARTS = {
   1: "Partie 1 – Comprendre les perturbateurs endocriniens",
   2: "Partie 2 – Conseils pour réduire l’exposition"
