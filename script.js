@@ -137,48 +137,75 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // answer = indices des bonnes réponses (0 = A, 1 = B, 2 = C, 3 = D)
-  const QUESTIONS = [
-    { part: 1, q: "Quelle pratique permet de réduire l'exposition aux perturbateurs endocriniens en agriculture ?",
-      options: ["Augmenter les doses de pesticides", "Réduire l'utilisation des pesticides", "Pulvériser davantage de produits", "Mélanger plusieurs pesticides"], answer: [1] },
-    { part: 1, q: "Pourquoi est-il préférable d'utiliser des variétés de plantes résistantes aux ravageurs ?",
-      options: ["Pour augmenter les traitements chimiques", "Pour limiter le recours aux pesticides", "Pour supprimer tous les insectes", "Pour accélérer la croissance des mauvaises herbes"], answer: [1] },
-    { part: 1, q: "Quel insecte peut être utilisé comme auxiliaire naturel pour lutter contre les pucerons ?",
-      options: ["La mouche domestique", "La coccinelle", "Le moustique", "La guêpe commune"], answer: [1] },
-    { part: 1, q: "Quels équipements permettent de protéger un agriculteur lors de la manipulation de produits phytosanitaires ?",
-      options: ["Des gants, une combinaison, des lunettes et une protection respiratoire adaptée", "Un simple tee-shirt", "Des chaussures ouvertes", "Aucun équipement particulier"], answer: [0] },
-    { part: 1, q: "Par quelles voies les produits chimiques peuvent-ils pénétrer dans l'organisme ?",
-      options: ["Uniquement par les cheveux", "Par la peau, les yeux et les voies respiratoires", "Uniquement par les oreilles", "Uniquement par les pieds"], answer: [1] },
-    { part: 1, q: "Qu'est-ce que le délai de rentrée dans une parcelle traitée ?",
-      options: ["Le temps à respecter avant de retourner dans la zone traitée", "Le temps nécessaire pour planter une culture", "Le temps de stockage des récoltes", "Le temps de préparation du produit"], answer: [0] },
-    { part: 1, q: "Pourquoi faut-il respecter le délai de rentrée ?",
-      options: ["Pour limiter l'exposition aux résidus de produits phytosanitaires", "Pour augmenter la quantité de pesticides", "Pour accélérer la récolte", "Pour favoriser les mauvaises herbes"], answer: [0] },
-    { part: 1, q: "Comment faut-il stocker les produits phytosanitaires ?",
-      options: ["Dans une cuisine", "Dans un local dédié, fermé et ventilé", "À proximité des aliments", "Dans une bouteille d'eau"], answer: [1] },
-    { part: 1, q: "Pourquoi faut-il conserver les produits dans leur emballage d'origine ?",
-      options: ["Pour garder les informations de sécurité et d'identification", "Pour gagner de la place", "Pour éviter de lire les consignes", "Pour faciliter leur mélange"], answer: [0] },
-    { part: 1, q: "Quel risque existe lorsque les produits phytosanitaires sont mal stockés ?",
-      options: ["Une meilleure efficacité des produits", "Des fuites et une contamination de l'environnement", "Une diminution automatique de leur toxicité", "Une disparition des résidus"], answer: [1] },
-    { part: 1, q: "Quelles personnes peuvent être particulièrement vulnérables aux perturbateurs endocriniens ?",
-      options: ["Les femmes enceintes et les jeunes enfants", "Uniquement les personnes âgées", "Uniquement les sportifs", "Aucune catégorie de population"], answer: [0] },
-    { part: 1, q: "Quel geste faut-il effectuer après avoir manipulé des produits phytosanitaires ?",
-      options: ["Se laver soigneusement les mains", "Manger directement", "Toucher son visage", "Garder ses gants contaminés"], answer: [0] },
-    { part: 1, q: "Comment faut-il laver les vêtements de travail potentiellement contaminés ?",
-      options: ["Avec le linge de toute la famille", "Séparément du linge personnel", "Sans les laver", "Uniquement à l'eau froide, sans lessive"], answer: [1] },
-    { part: 1, q: "Quelles pratiques permettent de réduire l'utilisation des pesticides ?",
-      options: ["Utiliser des auxiliaires naturels", "Diversifier les cultures", "Augmenter systématiquement les doses de pesticides", "Utiliser des pièges pour surveiller les ravageurs"], answer: [0, 1, 3], multi: true },
-    { part: 1, q: "Quel est l'objectif de l'agroécologie ?",
-      options: ["Développer une agriculture plus respectueuse des écosystèmes", "Augmenter systématiquement les produits chimiques", "Éliminer tous les insectes", "Remplacer toutes les cultures par une seule variété"], answer: [0] },
-    { part: 2, q: "Comment les pesticides peuvent-ils atteindre les cours d'eau ?",
-      options: ["Par le ruissellement depuis les parcelles agricoles", "Uniquement par les nuages", "Par la lumière du soleil", "Par la photosynthèse"], answer: [0] },
-    { part: 2, q: "Quel phénomène peut être observé chez certains poissons exposés à des perturbateurs endocriniens ?",
-      options: ["La féminisation de certains mâles", "Une augmentation systématique de leur taille", "La disparition de leurs nageoires", "Une transformation en amphibiens"], answer: [0] },
-    { part: 2, q: "Comment les oiseaux peuvent-ils être exposés aux pesticides agricoles ?",
-      options: ["En mangeant des graines traitées", "En respirant uniquement l'air marin", "En buvant uniquement de l'eau de pluie", "En dormant dans les arbres"], answer: [0] },
-    { part: 2, q: "Quels effets certains perturbateurs endocriniens peuvent-ils avoir sur les oiseaux ?",
-      options: ["Des perturbations de l'incubation et du comportement reproducteur", "Une amélioration systématique de la reproduction", "Une disparition immédiate de toutes les espèces", "Une augmentation automatique du nombre d'œufs"], answer: [0] },
-    { part: 2, q: "Quels effets une exposition à de faibles doses de certains pesticides peut-elle avoir sur les abeilles ?",
-      options: ["Des perturbations de l'orientation, de l'apprentissage et de la ponte de la reine", "Une augmentation systématique de la production de miel", "Une disparition de leur besoin de nourriture", "Une amélioration automatique de leur mémoire"], answer: [0] }
-  ];
+const PARTS = {
+  1: "Partie 1 – Comprendre les perturbateurs endocriniens",
+  2: "Partie 2 – Conseils pour réduire l’exposition"
+};
+
+// answer = indices des bonnes réponses (0 = A, 1 = B, 2 = C, 3 = D)
+const QUESTIONS = [
+  // 15 questions scientifiques
+  { part: 1, q: "Quel est le rôle principal du système endocrinien ?",
+    options: ["Produire et réguler des hormones", "Transporter l'oxygène dans les poumons", "Digérer les aliments", "Protéger uniquement la peau"], answer: [0] },
+
+  { part: 1, q: "Comment les perturbateurs endocriniens peuvent-ils agir ?",
+    options: ["Tous de la même manière", "En modifiant différents mécanismes hormonaux", "Uniquement en détruisant les hormones", "Seulement dans le système digestif"], answer: [1] },
+
+  { part: 1, q: "Quel mécanisme est associé à certains perturbateurs endocriniens industriels, comme le BPA ?",
+    options: ["Une interaction directe avec certains récepteurs hormonaux", "La transformation des hormones en vitamines", "L'arrêt de toute production hormonale", "La destruction des cellules nerveuses"], answer: [0] },
+
+  { part: 1, q: "Quelle enzyme l'atrazine peut-elle modifier dans certains modèles expérimentaux ?",
+    options: ["L'aromatase CYP19A1", "La lactase", "L'hémoglobine", "La pepsine"], answer: [0] },
+
+  { part: 1, q: "Que peut faire le récepteur PXR lorsqu'il est activé par certaines substances ?",
+    options: ["Modifier le métabolisme et l'élimination de certaines substances ou hormones", "Produire directement de l'insuline", "Empêcher toute digestion", "Transformer les pesticides en hormones naturelles"], answer: [0] },
+
+  { part: 1, q: "Quelles sont des voies possibles d'exposition aux pesticides ?",
+    options: ["Professionnelle, alimentaire, hydrique et résidentielle", "Uniquement par les cheveux", "Uniquement par les oreilles", "Seulement pendant le sommeil"], answer: [0] },
+
+  { part: 1, q: "À quoi a servi le programme Matphyto-DOM à La Réunion ?",
+    options: ["À reconstituer l'exposition professionnelle aux pesticides dans la canne à sucre", "À mesurer le nombre de poissons dans les lagons", "À remplacer les recensements agricoles", "À évaluer uniquement la qualité de l'air"], answer: [0] },
+
+  { part: 1, q: "Combien de substances actives différentes l'étude Matphyto-DOM a-t-elle recensées dans les années étudiées pour la canne à sucre ?",
+    options: ["5", "25", "100", "250"], answer: [1] },
+
+  { part: 1, q: "Selon les résultats présentés dans le site, quelle part des travailleurs était exposée à au moins une substance CMR ou PE en 2010 ?",
+    options: ["Environ 10 %", "Environ 25 %", "Environ 44 %", "Environ 88 %"], answer: [3] },
+
+  { part: 1, q: "Que montrent les suivis de l'eau à La Réunion présentés dans le site ?",
+    options: ["Des pesticides ou leurs métabolites ont été détectés dans certaines eaux", "Aucune substance n'a jamais été détectée", "L'eau ne peut pas être contaminée par ruissellement", "Seuls les insecticides peuvent atteindre l'eau"], answer: [0] },
+
+  { part: 1, q: "Pourquoi certaines molécules interdites ou moins utilisées peuvent-elles encore être détectées dans l'environnement ?",
+    options: ["Parce que certaines molécules ou leurs métabolites persistent dans les milieux", "Parce qu'elles sont produites par les plantes", "Parce que l'interdiction les rend plus actives", "Parce qu'elles disparaissent puis réapparaissent spontanément"], answer: [0] },
+
+  { part: 1, q: "Que signifie l'effet « cocktail » ?",
+    options: ["L'exposition à plusieurs substances pouvant avoir des effets combinés", "L'exposition à une seule substance pure", "Le mélange de pesticides dans un récipient uniquement", "La disparition simultanée de tous les pesticides"], answer: [0] },
+
+  { part: 1, q: "Quelle affirmation correspond au niveau de preuve présenté sur le glyphosate dans le site ?",
+    options: ["Tous ses effets endocriniens chez l'humain sont démontrés", "Les données expérimentales existent, mais les preuves endocriniennes humaines restent hétérogènes", "Il n'a jamais été étudié", "Il cause nécessairement une maladie chez toute personne exposée"], answer: [1] },
+
+  { part: 1, q: "Pourquoi une exposition pendant la grossesse ou la petite enfance est-elle particulièrement étudiée ?",
+    options: ["Certaines périodes du développement sont sensibles et des effets peuvent apparaître plus tard", "Les hormones ne fonctionnent pas avant l'âge adulte", "Les pesticides ne peuvent agir que chez les enfants", "Elle empêche toujours le développement du système nerveux"], answer: [0] },
+
+  { part: 1, q: "Quelle conclusion est la plus prudente concernant les pesticides et les maladies à La Réunion ?",
+    options: ["Un pesticide précis explique à lui seul toutes les maladies", "Les expositions et certains mécanismes sont documentés, mais la causalité locale doit être étudiée avec prudence", "Aucune exposition n'a été mesurée", "Toute personne exposée développera forcément un cancer"], answer: [1] },
+
+  // 5 questions sur les conseils
+  { part: 2, q: "Quels équipements de protection faut-il porter lors de la préparation ou de l'épandage d'un produit phytosanitaire ?",
+    options: ["Des gants adaptés, une combinaison, des lunettes et une protection respiratoire appropriée", "Un tee-shirt et des sandales", "Des lunettes de soleil uniquement", "Aucun équipement si le traitement est rapide"], answer: [0] },
+
+  { part: 2, q: "Quelle pratique peut aider à réduire le recours aux pesticides ?",
+    options: ["Le désherbage mécanique et la lutte intégrée", "Augmenter systématiquement les doses", "Traiter même en l'absence de ravageurs", "Utiliser une seule culture partout"], answer: [0] },
+
+  { part: 2, q: "Que faut-il faire avant et pendant un traitement ?",
+    options: ["Respecter les doses indiquées et éviter de traiter par vent fort", "Doubler la dose quand il y a du vent", "Mélanger des produits sans vérifier les consignes", "Pulvériser vers les habitations"], answer: [0] },
+
+  { part: 2, q: "Que faut-il faire après avoir manipulé des produits phytosanitaires ?",
+    options: ["Se laver, se changer et laver séparément les vêtements de travail", "Garder les vêtements contaminés toute la journée", "Manger sans se laver les mains", "Laver les vêtements avec le linge de toute la famille"], answer: [0] },
+
+  { part: 2, q: "Comment faut-il stocker les produits phytosanitaires ?",
+    options: ["Dans leur emballage d'origine, dans un local fermé et ventilé", "Dans une bouteille alimentaire", "À côté des aliments, dans la cuisine", "Dans un endroit accessible aux enfants"], answer: [0] }
+];
 
   const $ = id => document.getElementById(id);
   const box = $("quizBox");
