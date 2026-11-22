@@ -304,6 +304,13 @@ ul { list-style: none; }
 .check-list li { position: relative; padding-left: 2rem; margin-bottom: 0.6rem; }
 .check-list li::before { content: "✔"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
 
+.expo-hint {
+  margin: 0 auto 0.8rem;
+  color: var(--blue-dark);
+  font-weight: 600;
+  text-align: center;
+}
+
 /* ---------- Effets ---------- */
 .effects-stage {
   position: relative;
