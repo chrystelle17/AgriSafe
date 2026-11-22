@@ -205,7 +205,7 @@ const QUESTIONS = [
 
   { part: 2, q: "Comment faut-il stocker les produits phytosanitaires ?",
     options: ["Dans leur emballage d'origine, dans un local fermé et ventilé", "Dans une bouteille alimentaire", "À côté des aliments, dans la cuisine", "Dans un endroit accessible aux enfants"], answer: [0] }
-];
+  ];
 
   const $ = id => document.getElementById(id);
   const box = $("quizBox");
