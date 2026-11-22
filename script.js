@@ -130,13 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ==========================================================
    QUIZ INTERACTIF
    ========================================================== */
-(function () {
-  const PARTS = {
-    1: "Partie 1 – Prévention des risques agricoles",
-    2: "Partie 2 – Impacts sur la biodiversité"
-  };
-
-  // answer = indices des bonnes réponses (0 = A, 1 = B, 2 = C, 3 = D)
+// answer = indices des bonnes réponses (0 = A, 1 = B, 2 = C, 3 = D)
 const PARTS = {
   1: "Partie 1 – Comprendre les perturbateurs endocriniens",
   2: "Partie 2 – Conseils pour réduire l’exposition"
